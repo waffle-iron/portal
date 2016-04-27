@@ -1,0 +1,28 @@
+{
+
+  "name": "AnnunityUser",
+  "version": ".1",
+  "users": [
+              {
+                "user": "Loren",
+                "password": "Lwebster123"
+              },
+              {
+                "user": "Agatha",
+                "password": "password1"
+              },
+              {
+                "user": "Joyce",
+                "password": "password2"
+              },
+              {
+                "user": "Nikechia",
+                "password": "password3"
+              },
+              {
+                "user": "Isacc",
+                "password": "password3"
+              }
+           ]
+
+}
