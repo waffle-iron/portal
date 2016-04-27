@@ -20,7 +20,18 @@ app.service("loginService", function ($http, $q){
           $scope.user = data.user
       });
 
-      var username = angular.element(document.querySelector('username')).value;
-      var password = angular.element(document.querySelector('password')).value;
 
+      if (username == $scope.user[0] && password == $scope.password[0]) {
+        $location.path('/profile-01');
+      } else if (username == $scope.user[1] && password == $scope.password[1]) {
+        $location.path('/profile-02');
+      } else if (username == $scope.user[2] && password2 == $scope.password[2]) {
+        $location.path('/profile-03');
+      } else if (username == $scope.user[3] && password3 == password[3]) {
+        $location.path('/profile-04');
+      } else if (username == $scope.user[4] && password4 == $scope.password[4]) {
+        $location.path('/profile-05');
+      } else {
+        $location.path('/login');
+      }
 }])
