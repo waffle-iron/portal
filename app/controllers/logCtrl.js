@@ -10,28 +10,31 @@ app.service("loginService", function ($http, $q){
 
     this.getuser = function () {
         return deferred.promise;
-    }
+    };
 })
+// load $location
+.controller('logCtrl', ['$scope', 'loginService', '$location', function($scope, loginService, $location) {
 
-  .controller('logCtrl', ['$scope', 'loginService', function($scope, loginService, $timeout, $window, $location) {
+    var promise = loginService.getuser();
+    promise.then(function (data){
+        $scope.users = data.users;
+    });
 
-      var promise = loginService.getuser();
-      promise.then(function (data){
-          $scope.user = data.user
-      });
-
-
-      if (username == $scope.user[0] && password == $scope.password[0]) {
-        $location.path('/profile-01');
-      } else if (username == $scope.user[1] && password == $scope.password[1]) {
-        $location.path('/profile-02');
-      } else if (username == $scope.user[2] && password2 == $scope.password[2]) {
-        $location.path('/profile-03');
-      } else if (username == $scope.user[3] && password3 == password[3]) {
-        $location.path('/profile-04');
-      } else if (username == $scope.user[4] && password4 == $scope.password[4]) {
-        $location.path('/profile-05');
-      } else {
-        $location.path('/login');
-      }
-}])
+    // When the Sign in form is submitted (click on button or enter)
+    $scope.signIn = function () {
+        if ($scope.username == $scope.users[0].user && $scope.password == $scope.users[0].password) {
+            $location.path('/profile-01');
+        } else if ($scope.username == $scope.users[1].user && $scope.password == $scope.users[1].password) {
+            $location.path('/profile-02');
+        } else if ($scope.username == $scope.users[2].user && $scope.password == $scope.users[2].password) {
+            $location.path('/profile-03');
+        } else if ($scope.username == $scope.users[3].user && $scope.password == $scope.users[3].password) {
+            $location.path('/profile-04');
+        } else if ($scope.username == $scope.users[4].user && $scope.password == $scope.users[4].password) {
+            $location.path('/profile-05');
+        } else {
+            // $location.path('/login');
+            console.log('wrong password');
+        }
+    };
+}]);
