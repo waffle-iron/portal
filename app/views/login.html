@@ -1,25 +1,25 @@
 <div class="login-box">
-  <div class="contact-form">
+  <form class="contact-form" ng-submit="signIn()">
     <h1>Log into your Annuity Portal</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mauris lectus, tristique rutrum tellus vitae, gravida aliquet nulla.
     </p>
     <div>
       <i class="fa fa-user"></i>
-      <input id="username" name="name" type="text" placeholder="Username"/>
+      <input id="username" ng-model="username" name="name" type="text" placeholder="Username" required/>
     </div>
     <div>
       <i class="fa fa-lock"></i>
-      <input id="password" name="password" type="password" placeholder="Password"/>
+      <input id="password" ng-model="password" name="password" type="password" placeholder="Password" required/>
     </div>
     <div>
-      <button type="submit" onclick="goToPolicy()">Sign In</button>
+      <button type="submit">Sign In</button>
     </div>
     <div id="end">
       <i class="fa fa-bolt"></i> Powered by Ai
     </div>
     <!-- /contact-form -->
-  </div>
+  </form>
   <div class="feature-side">
     <ul class="feature-list">
       <li>
