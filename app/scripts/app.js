@@ -11,8 +11,8 @@ angular
 	        		templateUrl: 'app/views/login.html',
 							controller: 'logCtrl'
 	        	})
-						.state('profile-01' , {
-							url: '/profile-01',
-							templateUrl: 'app/views/profile-01.html'
+						.state('profile' , {
+							url: '/profile',
+							templateUrl: 'app/views/profile.html'
 						});
 	        }])

@@ -23,7 +23,7 @@ app.service("loginService", function ($http, $q){
     // When the Sign in form is submitted (click on button or enter)
     $scope.signIn = function () {
         if ($scope.username == $scope.users[0].user && $scope.password == $scope.users[0].password) {
-            $location.path('/profile-01');
+            $location.path('/profile');
         } else if ($scope.username == $scope.users[1].user && $scope.password == $scope.users[1].password) {
             $location.path('/profile-02');
         } else if ($scope.username == $scope.users[2].user && $scope.password == $scope.users[2].password) {
