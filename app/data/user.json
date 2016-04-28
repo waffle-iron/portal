@@ -5,7 +5,15 @@
   "users": [
               {
                 "user": "Loren",
-                "password": "Lwebster123"
+                "password": "Lwebster123",
+                "login": {
+                  "welcome": "Hello, Loren Webster",
+                  "contract-number": "116-1310",
+                  "issue-date": "13-may-2013",
+                  "statement-period": "30-sept-2014-30-sept-2015",
+                  "annuity-type": "Flexible",
+                  "currency": "BSD"
+                }
               },
               {
                 "user": "Agatha",
