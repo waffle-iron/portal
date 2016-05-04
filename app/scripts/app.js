@@ -13,7 +13,7 @@ angular
 	        	})
 						.state('profile' , {
 							url: '/profile',
-							templateUrl: 'app/views/profile.html',
-							controller: 'profileCtrl'
+							templateUrl: 'app/views/profile.html'
+							//controller: 'profileCtrl'
 						});
 	        }])
